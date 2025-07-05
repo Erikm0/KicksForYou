@@ -1,0 +1,1033 @@
+@font-face {
+    font-family: 'LemonMilk_Bold';
+    src: url('../../fonts/lemon_milk/LEMONMILK-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}@font-face {
+    font-family: 'LemonMilk_BoldItalic';
+    src: url('../../fonts/lemon_milk/LEMONMILK-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'LemonMilk_Light';
+    src: url('../../fonts/lemon_milk/LEMONMILK-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LemonMilk_LightItalic';
+    src: url('../../fonts/lemon_milk/LEMONMILK-LightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'LemonMilk_MediumItalic';
+    src: url('../../fonts/lemon_milk/LEMONMILK-MediumItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'LemonMilk_Regular';
+    src: url('../../fonts/lemon_milk/LEMONMILK-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LemonMilk_RegularItalic';
+    src: url('../../fonts/lemon_milk/LEMONMILK-RegularItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    background-color: white;
+    font-family: 'LemonMilk_Light', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#ikon{
+    font-size: 30px;
+}
+.bi-eye-slash{
+    margin-left: -20px;
+    cursor: pointer;
+}
+
+.cim{
+    font-family: LemonMilk_Bold, sans-serif;
+}
+#neve{
+    font-family: LemonMilk_Bold, sans-serif;
+}
+
+/*Bejelentkezés nev*/
+
+#fioknev{
+    margin: 0;
+}
+
+.fiokhover {
+    width: fit-content;
+    position: relative;
+    display: inline-block;
+}
+
+.fiokhover .cim {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.fiokhover ul {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: fit-content;
+    padding: 0;
+    z-index: 1;
+}
+
+.fiokhover ul li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.fiokhover ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.fiokhover:hover ul {
+    display: block;
+}
+
+/*Bejelentkezés nev vége*/
+
+
+#cipovalasz{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 5cm;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+}
+
+
+#cipokepcontainer{
+    display: flex;
+    justify-content: center;
+}
+#cipoadatok{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*Cipőhöz szűrő*/
+.szurok{
+    margin-bottom: 10px;
+    background-color: rgba(194, 194, 194, 0.4);
+    border-radius: 25px;
+    color: black;
+    border: none ;
+    appearance: textfield;
+    padding: 5px;
+    text-align: center;
+}
+.szurok:hover{
+    background-color: rgba(124, 252, 0, 0.4);
+    transition: 0.4s;
+}
+
+.gomb-active{
+    margin-bottom: 10px;
+    border-radius: 25px;
+    color: black;
+    border: none ;
+    appearance: textfield;
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(124, 252, 0);/*124 252 0 */
+    box-shadow: 4px 5px 10px rgb(75, 171, 1);
+}
+
+.gomb-inactive{
+    border: none;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: rgba(211 211 211);/*211 211 211*/
+    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.torles:hover{
+    background-color: rgba(255, 0, 0, 0.4);
+    transition: 0.4s;
+}
+
+#opciok{
+    margin-top: 2cm;
+}
+
+select option {
+    background: white;
+    color: black;
+}
+#szuro{
+    text-align: center;
+    border-right: 2px black solid;
+    border-radius: 25px;
+}
+
+/*Cipőhöz szűrő vége*/
+
+
+/*Cipőhöz*/
+
+.termek:hover{
+    background-color: rgba(194, 194, 194, 0.4);
+    transition: 0.3s;
+}
+
+.cipo{
+    width: 90%;
+    height: auto;
+}
+#cipokep{
+    width: 90%;
+    height: auto;
+}
+
+@media (max-width: 1400px) and (min-height: 1000px) {
+    #szuro{
+        margin-top: 0;
+    }
+
+    .cipo {
+        width: 90%;
+        height: auto;
+    }
+    #cipokep{
+        width: 90%;
+        height: auto;
+    }
+    .szurok:hover{
+        background-color: rgba(124, 252, 0, 0.4);
+        transition: 0.4s;
+    }
+
+    .gomb-active{
+        margin-bottom: 10px;
+        border-radius: 25px;
+        color: black;
+        border: none ;
+        appearance: textfield;
+        padding: 5px;
+        text-align: center;
+        background-color: rgba(124, 252, 0);/*124 252 0 */
+        box-shadow: 4px 5px 10px rgb(75, 171, 1);
+    }
+
+    .gomb-inactive{
+        border: none;
+        border-radius: 25px;
+        padding: 5px;
+        width: 100px;
+        background-color: rgba(211 211 211);/*211 211 211*/
+        box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    .torles:hover{
+        background-color: rgba(255, 0, 0, 0.4);
+        transition: 0.4s;
+    }
+}
+@media (max-width: 500px) and (max-height: 920px) {
+
+    #szuro{
+        margin-top: 0;
+        text-align: center;
+        padding-bottom: 10px;
+        border-right: none;
+        border-bottom: 2px black solid;
+        border-radius: 25px;
+    }
+    .szurok{
+
+        margin: 5px;
+        width: 100px;
+        background-color: rgba(194, 194, 194, 0.4);
+        border-radius: 25px;
+        color: black;
+        border: none;
+        appearance: textfield;
+        padding: 5px;
+        text-align: center;
+    }
+
+    #opciok {
+        margin-top: 10px;
+    }
+
+    #cipokep{
+        width: 90%;
+        height: auto;
+    }
+    .szurok:hover{
+        background-color: rgba(124, 252, 0, 0.4);
+        transition: 0.4s;
+    }
+
+    .gomb-active{
+        margin-bottom: 10px;
+        border-radius: 25px;
+        color: black;
+        border: none ;
+        appearance: textfield;
+        padding: 5px;
+        text-align: center;
+        background-color: rgba(124, 252, 0);/*124 252 0 */
+        box-shadow: 4px 5px 10px rgb(75, 171, 1);
+    }
+
+    .gomb-inactive{
+        border: none;
+        border-radius: 25px;
+        padding: 5px;
+        width: 100px;
+        background-color: rgba(211 211 211);/*211 211 211*/
+        box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    .torles:hover{
+        background-color: rgba(255, 0, 0, 0.4);
+        transition: 0.4s;
+    }
+}
+/*Cipőhöz vége*/
+
+
+
+
+/*NAVBAR*/
+
+.dropdown {
+    display: flex;
+    justify-content:center;
+}
+.meret_dropdown{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+select {
+    border-color: white;
+    padding-right:0.8rem ;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.1rem top 50%;
+    background-size: 0.65rem auto;
+}
+
+/* A legördülő menü elrejtés*/
+.dropdown-menu {
+    --bs-dropdown-min-width: 0;
+    width: max-content;
+    margin-top: 0.7cm;
+    display: none;
+}
+
+/* A legördülő menü megjelenítése*/
+.nav-item:hover .dropdown-menu {
+    display: block;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header-container h1 {
+    display: flex;
+    text-align: center;
+}
+
+.header-container .kitoltes {
+    display: flex;
+    flex: 1 0 0;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hamburger {
+    visibility: hidden;
+    font-size: 24px;
+    width: auto;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s, ease-in-out;
+
+}
+
+.nav-menu{
+    padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-container {
+        background-color: rgba(194, 194, 194, 0.4);
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: flex-start
+
+    }
+
+    .header-container .login {
+        text-align: right;
+        margin-left: 10px;
+    }
+
+    .header-container nav {
+        display: none;
+        margin-top: 10px;
+    }
+
+    .header-container.nav-open nav {
+        display: block;
+    }
+
+    .hamburger {
+        width: 20px;
+        display: inline-block;
+        visibility: visible;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(-8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    .navok{
+        margin-top: 0;
+        transition: 0.3s;
+    }
+
+    .nav-menu{
+
+        position: fixed;
+        left:-100%;
+        background-color: rgba(194, 194, 194, 0.4);
+        gap:0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active{
+        left: 0;
+        position: absolute;
+        transition: 0.3s;
+    }
+    .navok.active{
+        margin-bottom: 81px;
+        transition: 0.3s;
+    }
+
+    main.active:after{
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        z-index: 2;
+    }
+}
+
+header {
+    background-color: rgba(194, 194, 194, 0.4);
+    border-bottom: 1px grey solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+header h1 {
+    color:black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+header nav ul li {
+    display: inline;
+    font-size: 18px;
+    margin-right: 10px;
+    width: 3cm;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+/*NAVBAR VÉGE*/
+
+
+
+/*Grid*/
+.container-fluid{
+
+ margin-top: 4cm;
+}
+
+#gridhatter{
+    width: 100%;
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+div[ class="row"]{
+
+    margin-bottom: 2cm;
+}
+
+img{
+    width: 400px;
+    height: 350px;
+}
+/*Grid vége*/
+
+
+
+
+/*Cipőméret megjelenítés*/
+
+.dropbtn {
+    border: 1px solid black;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 30vh;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+.show {
+    display: block;
+}
+
+/*kosár gomb*/
+
+#kosar{
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: white;
+    color:black;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    position: relative;
+    transition: all .20s;
+}
+
+span{
+    position: relative;
+    z-index: 2;
+}
+
+#kosar:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: black;
+    transition: all .20s;
+}
+
+#kosar:hover{
+    color: #fff;
+}
+
+#kosar:hover:after{
+    width: 100%;
+}
+
+
+/*kosár oldal*/
+
+#kosarCim{
+
+    text-align: center;
+    margin-top: 4cm;
+
+}
+
+#kosarAra{
+    text-align: right;
+    margin-right: 174px;
+}
+
+.kosarCipo{
+
+    width: 230px !important;
+    height: 150px !important;
+
+}
+.kosarCipo:hover{
+    width: 230px !important;
+    height: 150px !important;
+    background-color: rgba(5,5,5,0.6);
+    border: 1px solid;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+.kosarTorles{
+    background-color: white !important;
+    background-image: linear-gradient(0, #FF000066, #FF000066);
+    background-size: 0;
+    background-repeat: no-repeat;
+    padding:6px 20px 6px 20px;
+    font-size: 20px;
+    border-radius: 25px;
+
+}
+
+.kosarTorles:hover{
+    background-size: 100%;
+    border: 2px solid #E6000099;
+    border-radius: 25px;
+    transition: .2s;
+}
+.kosarTorles::before{
+    content: "";
+    background-image: linear-gradient(0, #E6000099, #E6000099);
+    background-size: 0;
+    background-repeat: no-repeat;
+    padding: 6px 20px 6px 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    position: absolute;
+    width: 3.2cm;
+    height: 1cm;
+    z-index: -1;
+}
+.kosarTorles:hover::before {
+    background-size: 100%;
+    transition: .1s;
+    width: 3.2cm;
+    height: 1cm;
+    translate: -1.75rem -0.75rem;
+}
+
+
+#termekek {
+    list-style-type: none;
+    display: flex;
+    width: 1000px;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-around;
+
+}
+
+#termekekSzoveg{
+    margin-bottom: 0;
+    margin-block-end: 0;
+}
+
+#termekek li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media only screen and (max-width: 912px) and (min-width: 768px){
+    .kosarCipo{
+
+        width: 230px !important;
+        height: 150px !important;
+
+    }
+
+    #kosarAra{
+        text-align: right;
+    }
+
+    #termekek {
+        list-style-type: none;
+        display: flex;
+        width: 700px;
+        padding: 0;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: space-around;
+    }
+    #termekek li {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .kosarCipo:hover{
+        width: 230px !important;
+        height: 150px !important;
+        background-color: rgba(5,5,5,0.6);
+        border: 1px solid;
+        border-radius: 25px;
+        transition: 0s;
+    }
+
+}
+@media only screen and (max-width: 767px) {
+    .kosarCipo{
+
+        width: 200px !important;
+        height: 150px !important;
+    }
+
+    #kosarAra{
+        text-align: right;
+    }
+
+    #termekek {
+        list-style-type: none;
+        display: flex;
+        padding-left: 0;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #termekekSzoveg {
+        font-size: 15px;
+    }
+    #termekek li {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .kosarCipo:hover{
+        width: 230px !important;
+        height: 150px !important;
+        background-color: rgba(5,5,5,0.6);
+        border: 1px solid;
+        border-radius: 25px;
+        transition: 0s;
+    }
+}
+
+
+/*kosár oldal vége*/
+
+/*Cipőméret megjelenítés vége*/
+
+
+
+
+
+/*Fiókkal kapcsolatban*/
+#fiok_div{
+    text-align: center;
+    margin-top: 5cm;
+    padding: 20px;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input{
+    border-radius: 25px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.4);
+    padding:2px 10px 2px 10px;
+    font-family: Arial, sans-serif;
+    padding-right: 30px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#fiok_hatter{
+
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.adatmegadas{
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
+}
+@media only screen and (max-width: 1000px){
+    #fiok_div {
+        text-align: center;
+        margin-top: 4cm;
+        padding: 20px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#meretek{
+    margin-top: 20px;
+}
+
+#submit_gomb{
+    background-color: white !important;
+    background-image: linear-gradient(0, #80808066, #80808066);
+    background-size: 0;
+    transition: .2s;
+    background-repeat: no-repeat;
+    padding:6px 20px 6px 20px;
+    font-size: 20px;
+}
+
+#submit_gomb:hover{
+    background-size: 100%;
+    text-decoration: underline;
+    border: 1px solid black;
+    color: black;
+
+}
+
+.siker{
+    background-color: lightgreen;
+    border: 1px solid greenyellow;
+    border-radius: 30px;
+    color: black;
+    width: fit-content;
+    padding: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hiba{
+    background-color: indianred;
+    border: 1px solid red;
+    border-radius: 30px;
+    color: black;
+    width: fit-content;
+    padding: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Fiókkal kapcsolatban vége*/
+
+
+
+
+
+/*Footer*/
+footer {
+    background-color: rgba(194, 194, 194, 0.4);
+    border-top: solid 1px black ;
+    border-radius: 50px 50px 0 0;
+    padding: 20px;
+    margin-top: auto;
+}
+
+#footercontainer {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#footercontainer p {
+    margin: 0;
+}
+
+#footercontainer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footercontainer ul li {
+    display: inline-block;
+}
+/*Footer vége*/
+
+
+/*Buborékok*/
+#background-wrap {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+@keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@keyframes sideWays {
+    0% {
+        margin-left:0;
+    }
+    100% {
+        margin-left:50px;
+    }
+}
+
+.x1 {
+    animation: animateBubble 30s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: -5%;
+    top: 5%;
+    transform: scale(0.6);
+}
+
+.x2 {
+    animation: animateBubble 25s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 5%;
+    top: 80%;
+    transform: scale(0.4);
+}
+
+.x3 {
+    animation: animateBubble 33s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 10%;
+    top: 40%;
+    transform: scale(0.7);
+}
+
+.x4 {
+    animation: animateBubble 27s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    left: 20%;
+    top: 0;
+    transform: scale(0.3);
+}
+
+.x5 {
+    animation: animateBubble 33s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 30%;
+    top: 50%;
+    transform: scale(0.5);
+}
+
+.x6 {
+    animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 50%;
+    top: 0;
+    transform: scale(0.8);
+}
+
+.x7 {
+    animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 65%;
+    top: 70%;
+    transform: scale(0.4);
+}
+
+.x8 {
+    animation: animateBubble 27s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    left: 80%;
+    top: 10%;
+    transform: scale(0.3);
+}
+
+.x9 {
+    animation: animateBubble 34s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 90%;
+    top: 50%;
+    transform: scale(0.6);
+}
+
+.x10 {
+    animation: animateBubble 31s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 80%;
+    top: 80%;
+    transform: scale(0.3);
+}
+
+.bubble {
+    border-radius: 50%;
+    background-color: rgba(150, 150, 150, 0.3);
+    height: 200px;
+    position: absolute;
+    width: 200px;
+}

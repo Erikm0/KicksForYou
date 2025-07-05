@@ -1,0 +1,528 @@
+@font-face {
+    font-family: 'LemonMilk_Bold';
+    src: url('../fonts/lemon_milk/LEMONMILK-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}@font-face {
+    font-family: 'LemonMilk_BoldItalic';
+    src: url('../fonts/lemon_milk/LEMONMILK-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'LemonMilk_Light';
+    src: url('../fonts/lemon_milk/LEMONMILK-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LemonMilk_LightItalic';
+    src: url('../fonts/lemon_milk/LEMONMILK-LightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'LemonMilk_MediumItalic';
+    src: url('../fonts/lemon_milk/LEMONMILK-MediumItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'LemonMilk_Regular';
+    src: url('../fonts/lemon_milk/LEMONMILK-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LemonMilk_RegularItalic';
+    src: url('../fonts/lemon_milk/LEMONMILK-RegularItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body{
+    background-color: white;
+    font-family: 'LemonMilk_Light', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+#ikon{
+    font-size: 30px;
+}
+
+h2{
+    margin-top: 1cm;
+    text-align: center;
+    font-size: 40px;
+}
+
+.cim{
+    font-family: LemonMilk_Bold, sans-serif;
+}
+
+/*Bejelentkezés nev*/
+#fioknev{
+    margin: 0;
+}
+
+.fiokhover {
+    width: fit-content;
+    position: relative;
+    display: inline-block;
+}
+
+.fiokhover .cim {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.fiokhover ul {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width:fit-content;
+    padding: 0;
+    z-index: 1;
+}
+
+.fiokhover ul li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.fiokhover ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.fiokhover:hover ul {
+    display: block;
+}
+
+/*Bejelentkezés nev vége*/
+
+
+/*Forgókép*/
+
+.carousel-indicators button {
+    border-radius: 100%;
+    width: 8px !important;
+    height: 8px !important;
+}
+.carousel-indicators {
+    margin: 0;
+    right: 0;
+    bottom: 0;
+    left: 90%;
+}
+
+/*Cipőhöz*/
+.cipo{
+    width: 90%;
+    height: auto;
+}
+#cipokep{
+    width: 90%;
+    height: auto;
+}
+
+@media (max-width: 1400px) and (min-height: 1000px) {
+    .cipo {
+        width: 90%;
+        height: auto;
+    }
+    #cipokep{
+        width: 90%;
+        height: auto;
+    }
+}
+@media (max-width: 500px) and (max-height: 920px) {
+
+    #cipokep{
+        width: 90%;
+        height: auto;
+    }
+}
+
+/*Forgokepek*/
+.forgokep{
+    width: 100%;
+    height: 15cm;
+}
+@media (max-width: 600px){
+    .forgokep{
+        width: 100%;
+        height: 10cm;
+    }
+}
+
+h1{
+    text-align: center;
+}
+
+
+
+/*NAVBAR*/
+
+.dropdown {
+    display: flex;
+    justify-content:center;
+}
+/* A legördülő menü elrejtés*/
+.dropdown-menu {
+    --bs-dropdown-min-width: 0;
+    margin-top: 0.7cm;
+    width: max-content;
+    display: none;
+}
+
+/* A legördülő menü megjelenítése a navbar-ra mutatáskor */
+.nav-item:hover .dropdown-menu {
+    display: block;
+    text-align: center;
+}
+
+.header{
+    background-color: rgba(194, 194, 194, 0.4);
+    border-bottom: 1px grey solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header-container h1 {
+    display: flex;
+    text-align: center;
+}
+
+.header-container .kitoltes {
+    display: flex;
+    flex: 1 0 0;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hamburger {
+    visibility: hidden;
+    font-size: 24px;
+    width: auto;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s, ease-in-out;
+
+}
+
+.nav-menu{
+    padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .header-container {
+        background-color: rgba(194, 194, 194, 0.4);
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: flex-start
+
+    }
+
+    .header-container .login {
+        text-align: right;
+        margin-left: 10px;
+    }
+
+    .header-container nav {
+        display: none;
+        margin-top: 10px;
+    }
+
+    .header-container.nav-open nav {
+        display: block;
+    }
+
+    .hamburger {
+        width: 20px;
+        display: inline-block;
+        visibility: visible;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(-8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    .navok{
+        margin-top: 0;
+        transition: 0.3s;
+    }
+
+    .nav-menu{
+        position: fixed;
+        left:-100%;
+        background-color: rgba(194, 194, 194, 0.4);
+        gap:0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active{
+        left: 0;
+        position: absolute;
+        transition: 0.3s;
+    }
+    .navok.active{
+        margin-bottom: 81px;
+        transition: 0.3s;
+    }
+
+    main.active:after{
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        z-index: 2;
+    }
+}
+
+header {
+    background-color: rgba(194, 194, 194, 0.4);
+    border-bottom: 1px grey solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+
+}
+
+header h1 {
+    color:black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+header nav ul li {
+    display: inline;
+    font-size: 18px;
+    margin-right: 10px;
+    width: 3cm;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+/*NAVBAR VÉGE*/
+
+
+
+main{
+    margin-top: 3.4cm;
+}
+@media only screen and (max-width: 768px) {
+    main{
+        margin-top: 2.2cm;
+    }
+}
+
+#gridhatter{
+    width: 100%;
+    background-color: rgb(90, 90, 90, 0.5);
+    margin-top: 1cm;
+    margin-bottom: 2cm;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+div[ class="row"]{
+
+    margin-bottom: 1.5cm;
+    margin-top: 1.5cm;
+}
+
+/*Footer*/
+footer {
+    background-color: rgba(194, 194, 194, 0.4);
+    padding: 20px;
+    margin-top: auto;
+}
+
+#footercontainer {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footercontainer p {
+    margin: 0;
+}
+
+#footercontainer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footercontainer ul li {
+    display: inline-block;
+}
+
+#background-wrap {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+
+/*Buborékok*/
+
+@keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@keyframes sideWays {
+    0% {
+        margin-left:0;
+    }
+    100% {
+        margin-left:50px;
+    }
+}
+
+.x1 {
+    animation: animateBubble 30s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: -5%;
+    top: 5%;
+    transform: scale(0.6);
+}
+
+.x2 {
+    animation: animateBubble 25s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 5%;
+    top: 80%;
+    transform: scale(0.4);
+}
+
+.x3 {
+    animation: animateBubble 33s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 10%;
+    top: 40%;
+    transform: scale(0.7);
+}
+
+.x4 {
+    animation: animateBubble 27s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    left: 20%;
+    top: 0;
+    transform: scale(0.3);
+}
+
+.x5 {
+    animation: animateBubble 33s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 30%;
+    top: 50%;
+    transform: scale(0.5);
+}
+
+.x6 {
+    animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 50%;
+    top: 0;
+    transform: scale(0.8);
+}
+
+.x7 {
+    animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 65%;
+    top: 70%;
+    transform: scale(0.4);
+}
+
+.x8 {
+    animation: animateBubble 27s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    left: 80%;
+    top: 10%;
+    transform: scale(0.3);
+}
+
+.x9 {
+    animation: animateBubble 34s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    left: 90%;
+    top: 50%;
+    transform: scale(0.6);
+}
+
+.x10 {
+    animation: animateBubble 31s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 80%;
+    top: 80%;
+    transform: scale(0.3);
+}
+
+.bubble {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    background-color: rgba(150, 150, 150, 0.3);
+    height: 200px;
+    position: absolute;
+    width: 200px;
+}

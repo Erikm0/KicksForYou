@@ -1,0 +1,18 @@
+kategorizálni: 	Pl:	dunk
+			    jordan
+			    yeezy
+
+Ráviszem egy cipőre az egeret és másik szemsszögből mutassa
+
+Gombra ha ráviszem az egeret akkor átmenettel változzon meg a színe
+
+Több nyelvű legyen
+
+
+
+
+Oldalak példának:
+
+True To Sole
+Balazskicks
+Onsize.eu
